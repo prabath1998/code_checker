@@ -13,9 +13,9 @@ class DebugController extends Controller
     {
         $isValidCode = $this->checkSyntax($request->code);
         if($isValidCode){
-            return redirect('/')->with('success', 'Your code has no errors!');
+            return redirect('/')->with('success', 'Your code has no errors! 😍');
         }else{
-            return redirect('/')->with('error', 'Your code has syntax errors!');
+            return redirect('/')->with('error', 'Your code has syntax errors! 😩');
         }
     }
 
