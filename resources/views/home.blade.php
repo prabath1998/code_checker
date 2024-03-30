@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
     <title>Code Checker</title>
 </head>
 
@@ -14,19 +15,21 @@
     <form class="w-1/2 mx-auto mt-20" action="{{ url('/check') }}" method="POST">
         @csrf
 
-        @if (session('success'))
-            <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-100  dark:text-green-400"
-                role="alert">
-                <span class="font-medium">{{ session('success') }}
-            </div>
-        @endif
+        <div x-data="{ showMessage: true }" x-show="showMessage" x-init="setTimeout(() => showMessage = false, 2000)">
+            @if (session('success'))
+                <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-100  dark:text-green-400"
+                    role="alert">
+                    <span class="font-medium">{{ session('success') }}
+                </div>
+            @endif
 
-        @if (session('error'))
-            <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-100 dark:text-red-400"
-                role="alert">
-                <span class="font-medium">{{ session('error') }}
-            </div>
-        @endif
+            @if (session('error'))
+                <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-100 dark:text-red-400" role="alert">
+                    <span class="font-medium">{{ session('error') }}
+                </div>
+            @endif
+        </div>
+
 
         <div class="p-6 bg-white border border-gray-200 rounded-lg shadow">
             <h1 class="text-indigo-600 text-3xl font-bold">Code Checker</h1>
