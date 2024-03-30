@@ -18,7 +18,7 @@ class DebugController extends Controller
         }
     }
 
-    // Check if the code has a bracket mismatching error
+    // Check if the code has a bracket or quote mismatching error
     public function checkSyntax($data)
     {
 
