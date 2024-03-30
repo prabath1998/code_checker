@@ -30,8 +30,9 @@ class DebugController extends Controller
         $string = preg_replace('/\s+/', '', $data);
 
         $doubleQuoteCount = substr_count($string, '"');
+        $singleQuoteCount = substr_count($string, "'");
 
-        if ($doubleQuoteCount % 2 != 0) {
+        if ($doubleQuoteCount % 2 != 0 || $singleQuoteCount % 2 != 0) {
             return false;
         }
 
