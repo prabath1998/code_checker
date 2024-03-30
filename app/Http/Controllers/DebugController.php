@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\DebugRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class DebugController extends Controller
 {
@@ -59,6 +60,7 @@ class DebugController extends Controller
                 return false;
             }
         } catch (\Exception $e) {
+            Log::error($e->getMessage());
             return false;
         }
     }
