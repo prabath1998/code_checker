@@ -10,16 +10,11 @@
     <title>Code Checker</title>
 </head>
 
-<body>
+<body class="flex items-center justify-center h-screen">
 
 
-
-
-    <form class="w-1/2 mx-auto mt-20" action="{{ url('/check') }}" method="POST">
+    <form class="w-1/2 mx-auto" action="{{ url('/check') }}" method="POST">
         @csrf
-
-
-
         <div x-data="{ showMessage: true }" x-show="showMessage" x-init="setTimeout(() => showMessage = false, 2000)">
             @if (session('success'))
                 <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-100  dark:text-green-400"
