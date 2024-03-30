@@ -29,14 +29,14 @@
         @endif
 
         <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
-            <h1 class="text-indigo-600 text-3xl">Code Checker</h1>
+            <h1 class="text-indigo-600 text-3xl font-bold">Code Checker</h1>
             <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
                 message</label>
             <textarea id="code" rows="4" name="code"
                 class="block p-2.5 w-full text-sm text-gray-900 bg-wheat-300 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Enter you code here..."></textarea>
+                placeholder="Enter you code here..." required></textarea>
             <button type="submit"
-                class="text-white mt-5 mx-auto bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Check</button>
+                class="mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 mx-auto">Check</button>
         </div>
     </form>
 
