@@ -12,8 +12,13 @@
 
 <body>
 
+
+
+
     <form class="w-1/2 mx-auto mt-20" action="{{ url('/check') }}" method="POST">
         @csrf
+
+
 
         <div x-data="{ showMessage: true }" x-show="showMessage" x-init="setTimeout(() => showMessage = false, 2000)">
             @if (session('success'))
@@ -33,6 +38,11 @@
 
         <div class="p-6 bg-white border border-gray-200 rounded-lg shadow">
             <h1 class="text-indigo-600 text-3xl font-bold">Code Checker</h1>
+            <p class="mb-3 text-gray-500 dark:text-gray-400 mt-3 p-2">
+                The Open and Close Bracket Checker Web App is a user-friendly tool designed to assist developers and programmers in verifying the correctness of code syntax, particularly focusing on the matching of opening and closing brackets.
+            </p>
+
+
             <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
                 message</label>
             <textarea id="code" rows="8" name="code"
